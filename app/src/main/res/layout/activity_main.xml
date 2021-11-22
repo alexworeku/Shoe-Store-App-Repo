@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F2F4"
+    tools:context=".MainActivity">
+
+    <!--app Bar Area -->
+    <RelativeLayout
+        android:id="@+id/rv_layout_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#072750"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perfect Shoes"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_homeSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_homeTitle"
+            android:text="For perfect style"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_style"
+            android:padding="6dp"
+            android:src="@drawable/refresh" />
+    </RelativeLayout>
+
+<!--    Search Area-->
+
+    <LinearLayout
+        android:id="@+id/ll_layout_searchArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_app_bar"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="13dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="12dp"
+        android:layout_below="@id/rv_layout_appBar"
+        >
+
+        <EditText
+
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="13"
+            android:background="@drawable/et_style"
+            android:focusedByDefault="false"
+            android:hint="Search for shoes"
+            android:padding="8dp"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/ib_search"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:padding="6dp"
+            android:src="@drawable/search" />
+
+    </LinearLayout>
+<ScrollView
+    android:id="@+id/sc_layout_adsAndBody"
+    android:layout_below="@id/ll_layout_searchArea"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Ads-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_style"
+                    android:padding="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nike_sale_1" />
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_style"
+                    android:padding="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nike_sale2" />
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_style"
+                    android:padding="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nike_sale3" />
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/btn_style"
+                    android:padding="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nike_sale4" />
+            </LinearLayout>
+        </HorizontalScrollView>
+        <!--body-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Brands List-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_brands"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+
+                />
+            <!--Shoes List-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_shoesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_brands"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="60dp" />
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+
+    <!--        Navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_nav_style"
+        app:itemIconTint="@color/nav_items_color"
+        app:itemTextColor="@color/nav_items_color"
+        app:menu="@menu/navigation_items" />
+
+</RelativeLayout>

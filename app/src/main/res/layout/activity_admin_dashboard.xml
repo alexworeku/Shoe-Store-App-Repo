@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#082450"
+    android:orientation="vertical"
+    tools:context=".AdminDashboardActivity"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/ib_backFromDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style"
+            android:padding="6dp"
+            android:src="@drawable/back"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_brandNameForDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/ib_backFromDashboard"
+            android:text="Dashboard"
+
+            android:textColor="#FFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_style"
+            android:text="Logout"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabL_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:tabIndicatorColor="#FCC81B"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextColor="#313D4F" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabL_dashboard" />
+
+    </RelativeLayout>
+
+</LinearLayout>

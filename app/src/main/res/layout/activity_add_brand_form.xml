@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".AddShoeFormActivity">
+
+    <RelativeLayout
+        android:id="@+id/rv_layout_addBrandAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:background="@drawable/rounded_app_bar">
+
+        <ImageButton
+            android:id="@+id/ib_backFromBrandForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/btn_style"
+            android:padding="6dp"
+            android:src="@drawable/back"
+
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="100dp"
+            android:layout_toRightOf="@+id/ib_backFromBrandForm"
+            android:text="Add Brand"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="13dp"
+                android:text="Fill the following form."
+                android:textColor="#313D4F"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <EditText
+
+                android:id="@+id/et_brandName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/et_style"
+
+                android:hint="Enter brand name"
+                android:padding="8dp"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/btn_browseBrandImage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/btn_style"
+                android:drawableLeft="@drawable/camera"
+                android:paddingHorizontal="5dp"
+                android:text="Add photo" />
+
+            <Button
+                android:id="@+id/btn_registerBrand"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_colored_style"
+
+                android:paddingHorizontal="5dp"
+                android:text="Register" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

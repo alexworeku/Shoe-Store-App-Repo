@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="190dp"
+    android:layout_margin="8dp"
+    android:background="#ffffff"
+    android:padding="4dp"
+    app:cardCornerRadius="12dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/iv_shoeImage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/tv_shoeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#232938"
+
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_shoePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#838A90"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/btn_viewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/et_style"
+            android:padding="2dp"
+            android:src="@drawable/more"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

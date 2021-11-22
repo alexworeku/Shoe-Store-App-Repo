@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".AddShoeFormActivity">
+    <RelativeLayout
+        android:id="@+id/rv_layout_shoeDetailAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:background="@drawable/rounded_app_bar">
+
+        <ImageButton
+            android:id="@+id/ib_backFromShoeForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style"
+            android:padding="6dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/back"
+
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/ib_backFromShoeForm"
+            android:text="Add shoe"
+
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="100dp"
+            />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    >
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Fill the following form."
+        android:textColor="#313D4F"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="13dp"
+        />
+
+    <EditText
+
+        android:id="@+id/et_shoeName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top|left"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/et_style"
+        android:gravity="top|left"
+
+        android:hint="Enter shoe name"
+        android:padding="8dp"
+        android:textSize="18sp" />
+
+    <EditText
+
+        android:id="@+id/et_shoePrice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/et_style"
+        android:hint="Enter shoe price"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:textSize="18sp" />
+
+    <EditText
+
+        android:id="@+id/et_shoeQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/et_style"
+        android:hint="Enter shoe quantity"
+        android:inputType="number"
+        android:padding="8dp"
+        android:textSize="18sp" />
+    <Spinner
+        android:id="@+id/sp_shoeBrands"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="18dp"
+
+        />
+    <EditText
+
+        android:id="@+id/et_shoeDesc"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/et_style"
+
+        android:hint="Enter shoe description"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+
+        android:textSize="18sp" />
+    <EditText
+
+        android:id="@+id/et_shoeStorePhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/et_style"
+        android:hint="Enter store phone number"
+        android:inputType="phone"
+        android:padding="8dp"
+        android:textSize="18sp" />
+    <EditText
+
+        android:id="@+id/et_shoeStoreLocation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/et_style"
+        android:hint="Enter store location (i.e. 9.0111916,38.791383)"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/btn_browseShoeImage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableLeft="@drawable/camera"
+        android:background="@drawable/btn_style"
+        android:text="Add photo"
+        android:paddingHorizontal="5dp"
+        android:layout_marginBottom="8dp"
+        />
+    <Button
+        android:id="@+id/btn_registerShoe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@drawable/btn_colored_style"
+        android:text="Register"
+
+        android:paddingHorizontal="5dp"
+        android:layout_marginBottom="8dp"
+        />
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

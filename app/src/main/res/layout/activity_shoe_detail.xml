@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:orientation="vertical"
+
+
+    tools:context=".ShoeDetailActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rv_layout_shoeDetailAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#082450">
+
+        <ImageButton
+            android:id="@+id/ib_backFromShoeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/btn_style"
+            android:padding="6dp"
+            android:src="@drawable/back"
+
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/ib_backFromShoeDetail"
+            android:text="Detail"
+
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_shoeImageForDetail"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_below="@id/rv_layout_shoeDetailAppBar"
+        android:background="@drawable/rounded_app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_shoeImageForDetail">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv_shoeImageForDetail"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rv_layout_shoe_nameAndPriceDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_shoeNameForDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Adidas"
+                    android:textColor="#313D4F"
+
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_shoePriceForDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$200"
+                    android:textColor="#313D4F"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_DiscTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Description"
+                android:textColor="#313D4F"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:background="#c0c0c0" />
+
+            <TextView
+                android:id="@+id/tv_shoeDiscForDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Its a good shoe.  everyone can wear it"
+                android:textColor="#313D4F"
+                android:textSize="19sp" />
+
+            <!--Contact area-->
+            <TextView
+                android:id="@+id/tv_ContactTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Contact Store"
+                android:textColor="#313D4F"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:background="#c0c0c0" />
+
+            <RelativeLayout
+                android:id="@+id/rv_layout_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_storePhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+
+
+                    android:textColor="#313D4F"
+                    android:textSize="19sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_callStore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_style"
+                    android:padding="6dp"
+                    android:src="@drawable/phone"
+
+
+                    />
+
+            </RelativeLayout>
+
+            <!--Location Area-->
+            <TextView
+                android:id="@+id/tv_LocationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Location"
+                android:textColor="#313D4F"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:background="#c0c0c0" />
+
+            <RelativeLayout
+                android:id="@+id/rv_layout_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_storeLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+
+                    android:text="See on map"
+                    android:textColor="#313D4F"
+                    android:textSize="19sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_openStoreMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_style"
+                    android:padding="6dp"
+                    android:src="@drawable/location"
+
+
+                    />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_addToCart"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_colored_style"
+                android:text="Add to cart"
+                android:textColor="#191919"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

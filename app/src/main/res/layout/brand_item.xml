@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_brandItemArea"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_marginRight="13dp"
+    android:background="@drawable/btn_style"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+
+    >
+
+    <ImageView
+        android:id="@+id/iv_brandImageForFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tv_brandName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="2dp"
+        android:text="Nike"
+        android:textColor="#191919"
+        android:textSize="15sp" />
+</LinearLayout>
